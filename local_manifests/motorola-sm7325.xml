@@ -3,18 +3,18 @@
   <!-- device trees -->
   <project name="gstjee/android_device_motorola_sm7325-common" path="device/motorola/sm7325-common" remote="github" revision="lineage-21" clone-depth="5"/>
   <project name="gstjee/android_device_motorola_dubai" path="device/motorola/dubai" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="LineageOS/android_device_motorola_berlin" path="device/motorola/berlin" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="LineageOS/android_device_motorola_berlna" path="device/motorola/berlna" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="LineageOS/android_device_motorola_xpeng" path="device/motorola/xpeng" remote="github" revision="lineage-21" clone-depth="5"/>
+  <!-- project name="LineageOS/android_device_motorola_berlin" path="device/motorola/berlin" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="LineageOS/android_device_motorola_berlna" path="device/motorola/berlna" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="LineageOS/android_device_motorola_xpeng" path="device/motorola/xpeng" remote="github" revision="lineage-21" clone-depth="5"/ -->
 
   <!-- kernel -->
   <project name="LineageOS/android_kernel_motorola_sm7325" path="kernel/motorola/sm7325" remote="github" revision="lineage-21" clone-depth="5"/>
 
   <!-- vendor -->
   <project name="TheMuppets/proprietary_vendor_motorola_sm7325-common" path="vendor/motorola/sm7325-common" remote="github" revision="lineage-21" clone-depth="5"/>
-  <!-- project name="gstjee/proprietary_vendor_motorola_dubai" path="vendor/motorola/dubai" remote="github" revision="896d977ceb6467fec81fa079fa4a27c0a35515fa"/ -->
-  <project name="gstjee/proprietary_vendor_motorola_dubai" path="vendor/motorola/dubai" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="TheMuppets/proprietary_vendor_motorola_berlin" path="vendor/motorola/berlin" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="TheMuppets/proprietary_vendor_motorola_berlna" path="vendor/motorola/berlna" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="TheMuppets/proprietary_vendor_motorola_xpeng" path="vendor/motorola/xpeng" remote="github" revision="lineage-21" clone-depth="5"/>
+  <!-- project name="gstjee/vendor_motorola_dubai" path="vendor/motorola/dubai" remote="github" revision="896d977ceb6467fec81fa079fa4a27c0a35515fa"/ -->
+  <!-- project name="gstjee/vendor_motorola_dubai" path="vendor/motorola/dubai" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="TheMuppets/proprietary_vendor_motorola_berlin" path="vendor/motorola/berlin" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="TheMuppets/proprietary_vendor_motorola_berlna" path="vendor/motorola/berlna" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="TheMuppets/proprietary_vendor_motorola_xpeng" path="vendor/motorola/xpeng" remote="github" revision="lineage-21" clone-depth="5"/ -->
 </manifest>
