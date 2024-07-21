@@ -25,7 +25,7 @@ repo forall -c 'git lfs install && git lfs pull && git lfs checkout'
 
 # apply some uncommited changes/patch from .bak dir
 cp -r .repo/.new/* ./
-
+make installclean
 brunch dubai 2>&1 | tee dubai_rom_make.log
 
 set +x
