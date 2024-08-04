@@ -25,6 +25,10 @@ curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/local_manife
 /opt/crave/resync.sh  &&
 #repo sync -j4 --fail-fast
 
+# vendor dubai tree check
+if [ ! -d "vendor/motorola/dubai" ]; then git clone --depth=1 https://github.com/gstjee/vendor_motorola_dubai-0.git vendor/motorola/dubai ; fi
+
 set +x
 bash tg "repo init, rom sources and devices trees sync completed!!"
+sleep 60
 set -x
