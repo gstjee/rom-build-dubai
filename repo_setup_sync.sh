@@ -27,8 +27,9 @@ curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/local_manife
 
 
 # rom source check: frameworks/base  and  packages/apps/Settings
-if [ ! -d "frameworks/base" ]; then git clone --depth=10 https://github.com/gstjee/frameworks_base_crd-mid.git frameworks/base ; fi
-if [ ! -d "packages/apps/Settings" ]; then git clone --depth=10 https://github.com/gstjee/packages_apps_Settings_crd-mid.git packages/apps/Settings ; fi
+if [ ! -d "frameworks/base" ]; then git clone https://github.com/crdroidandroid/android_frameworks_base.git frameworks/base ; fi
+if [ ! -d "packages/apps/Settings" ]; then git clone https://github.com/crdroidandroid/android_packages_apps_Settings.git packages/apps/Settings ; fi
+if [ ! -d "packages/apps/crDroidSettings" ]; then git clone https://github.com/crdroidandroid/android_packages_apps_crDroidSettings.git packages/apps/crDroidSettings ; fi
 
 # device tree check: vendor
 if [ ! -d "vendor/motorola/dubai" ]; then git clone --depth=5 https://github.com/gstjee/vendor_motorola_dubai-mid.git vendor/motorola/dubai ; fi
@@ -36,4 +37,5 @@ if [ ! -d "vendor/motorola/dubai" ]; then git clone --depth=5 https://github.com
 set +x
 bash tg "repo init, rom sources and devices trees sync completed!!"
 sleep 60
+if [ -f "sl" ]; then bash sl; fi
 set -x
