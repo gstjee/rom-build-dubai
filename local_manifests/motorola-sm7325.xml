@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <!-- device trees -->
-  <project name="gstjee/device_motorola_sm7325-common" path="device/motorola/sm7325-common" remote="github" revision="lineage-21" clone-depth="5"/>
-  <project name="gstjee/device_motorola_dubai" path="device/motorola/dubai" remote="github" revision="lineage-21" clone-depth="5"/>
+  <!-- project name="gstjee/device_motorola_sm7325-common" path="device/motorola/sm7325-common" remote="github" revision="lineage-21" clone-depth="5"/ -->
+  <!-- project name="gstjee/device_motorola_dubai" path="device/motorola/dubai" remote="github" revision="lineage-21" clone-depth="5"/ -->
   <!-- project name="LineageOS/android_device_motorola_berlin" path="device/motorola/berlin" remote="github" revision="lineage-21" clone-depth="5"/ -->
   <!-- project name="LineageOS/android_device_motorola_berlna" path="device/motorola/berlna" remote="github" revision="lineage-21" clone-depth="5"/ -->
   <!-- project name="LineageOS/android_device_motorola_xpeng" path="device/motorola/xpeng" remote="github" revision="lineage-21" clone-depth="5"/ -->
