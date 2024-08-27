@@ -3,10 +3,10 @@
 # run this script in rom source dir(ie 'rom')
 set +x
 if [ -f "sl" ]; then bash sl; fi
-
+sleep 100
 if [ ! -f "tg" ]; then
 	cp -r .repo/.new/* ./
-fi 
+fi
 
 bash tg "ROM build started at $(TZ='Asia/Kolkata' date +'%r %d %B')"
 rm -rf status1
