@@ -43,7 +43,7 @@ fi
 # vendor/motorola/dubai
 if [[ ! -d "$V_M_D_DIR" ]]; then
 git clone --depth=1 https://github.com/gstjee/vendor_motorola_dubai-mid.git -b "$los_branch" "$V_M_D_DIR"
-cd "$V_M_D_DIR" && git remote add gstjee https://gitlab.com/gstjee/vendor_motorola_dubai.git && git fetch --depth=5 origin -b "$los_branch"
+cd "$V_M_D_DIR" && git remote add gstjee https://gitlab.com/gstjee/vendor_motorola_dubai.git
 cd "$BASE_DIR"
 fi
 

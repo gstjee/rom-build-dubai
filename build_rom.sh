@@ -3,10 +3,10 @@
 # run this script in rom source dir(ie 'rom')
 set +x
 if [ -f "sl" ]; then bash sl; fi
-sleep 100
-if [ ! -f "tg" ]; then
-	cp -r .repo/.new/* ./
-fi
+sleep 180
+
+# apply some uncommited changes/patch from .bak dir
+cp -r .repo/.new/* ./
 
 bash tg "ROM build started at $(TZ='Asia/Kolkata' date +'%r %d %B')"
 rm -rf status1
@@ -20,19 +20,18 @@ if [ "$1" == "clean" ];then
 	make -j9 ARCH=arm clean
 fi
 
-# workaround for git lfs issue
-repo forall -c 'git lfs install && git lfs pull && git lfs checkout'
-
-# apply some uncommited changes/patch from .bak dir
-cp -r .repo/.new/* ./
 make installclean
 brunch dubai 2>&1 | tee dubai_rom_make.log
 
+
+# uncomment only when first intialsing
+#rm -rf frameworks/base packages/apps/Settings
+#git clone https://github.com/crdroidandroid/android_frameworks_base.git -b 14.0 frameworks/base
+#git clone https://github.com/crdroidandroid/android_packages_apps_Settings.git -b 14.0 packages/apps/Settings
+
 set +x
 bash tg "Brunch completed at $(TZ='Asia/Kolkata' date +'%r %d %B')"
-
 sudo apt update
-sudo apt install nano
 echo "1" > status1
 sleep 100
 if [ -f "log" ]; then bash log; fi
