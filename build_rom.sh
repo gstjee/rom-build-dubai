@@ -5,8 +5,10 @@ set +x
 if [ -f "sl" ]; then bash sl; fi
 sleep 180
 
-# apply some uncommited changes/patch from .bak dir
+# apply some uncommited changes/patch from .new dir and from quick_adjustments.sh
 cp -r .repo/.new/* ./
+curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/quick_adjustments.sh | bash &&
+
 
 bash tg "ROM build started at $(TZ='Asia/Kolkata' date +'%r %d %B')"
 rm -rf status1
