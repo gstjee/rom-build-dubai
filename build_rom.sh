@@ -33,7 +33,7 @@ brunch dubai 2>&1 | tee dubai_rom_make.log
 
 set +x
 bash tg "Brunch completed at $(TZ='Asia/Kolkata' date +'%r %d %B')"
-sudo apt update
+#sudo apt update
 echo "1" > status1
 sleep 100
 if [ -f "log" ]; then bash log; fi
