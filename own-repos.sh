@@ -9,6 +9,7 @@ P_A_crDS_DIR="packages/apps/crDroidSettings"
 V_M_D_DIR="vendor/motorola/dubai"
 D_M_SM_DIR="device/motorola/sm7325-common"
 D_M_D_DIR="device/motorola/dubai"
+H_M_DIR="hardware/motorola"
 crd_branch="14.0"
 los_branch="lineage-21"
 
@@ -58,6 +59,12 @@ fi
 if [[ ! -d "$D_M_D_DIR" ]]; then
 git clone https://github.com/gstjee/device_motorola_dubai-mid.git -b "$los_branch" "$D_M_D_DIR"
 cd "$D_M_D_DIR" && git remote add gstjee https://github.com/gstjee/device_motorola_dubai.git
+cd "$BASE_DIR"
+fi
+
+# hardware/motorola
+if [[ -d "$H_M_DIR" ]]; then
+cd "$H_M_DIR" && git remote add gstjee https://github.com/gstjee/hardware_motorola_los.git
 cd "$BASE_DIR"
 echo "1" > ./repo-clone-done
 fi
