@@ -9,12 +9,12 @@ fi
 bash tg "Crave build(repo sync part) started at $(TZ='Asia/Kolkata' date +'%r %d %B')"
 set -x
 echo "current dir: $(pwd)"
-
+du -sh
 # rom you  want to build
-repo init -u https://github.com/gstjee/android_crd.git -b 14.0 --git-lfs
+#repo init -u https://github.com/gstjee/android_crd.git -b 14.0 --git-lfs
 
 # initial setup only(comment previous one)
-#repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
+repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
 
 # devices trees
 rm -rf .repo/local_manifests && mkdir -p .repo/local_manifests
@@ -29,12 +29,12 @@ curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/local_manife
 
 
 # initial setup only(comment either this or next)
-curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/own-repos.sh | bash &&
+#curl https://raw.githubusercontent.com/gstjee/rom_build_dubai/crave/own-repos.sh | bash &&
 
 # initial setup only(comment either this previous)
-#git clone https://github.com/LineageOS/android_device_motorola_sm7325-common.git -b lineage-21 device/motorola/sm7325-common
-#git clone https://github.com/LineageOS/android_device_motorola_dubai.git -b lineage-21 device/motorola/dubai
-#git clone --depth=1 https://github.com/TheMuppets/proprietary_vendor_motorola_dubai.git -b lineage-21 vendor/motorola/dubai
+git clone https://github.com/LineageOS/android_device_motorola_sm7325-common.git -b lineage-21 device/motorola/sm7325-common
+git clone https://github.com/LineageOS/android_device_motorola_dubai.git -b lineage-21 device/motorola/dubai
+git clone --depth=1 https://github.com/TheMuppets/proprietary_vendor_motorola_dubai.git -b lineage-21 vendor/motorola/dubai
 
 
 sleep 20
@@ -46,5 +46,5 @@ bash tg "repo init, rom sources and devices trees sync completed!!"
 sleep 60
 if [ -f "sl" ]; then bash sl; fi
 set -x
-
+du -sh .repo/
 repo init -u https://github.com/gstjee/android_crd.git -b 14.0 --git-lfs
