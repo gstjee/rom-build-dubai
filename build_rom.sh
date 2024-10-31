@@ -35,6 +35,7 @@ set +x
 bash tg "Brunch completed at $(TZ='Asia/Kolkata' date +'%r %d %B')"
 #sudo apt update
 echo "1" > status1
+du -sh out/
 sleep 100
 if [ -f "log" ]; then bash log; fi
 
